@@ -1,0 +1,23 @@
+<!-- <div class="modal-header">
+    <h1>controller.cars.ShortDescription</h1>
+</div>
+
+<div class="modal-body">
+    <img ng-src="{{controller.car.ImageUrl}}" alt="" />
+    <h4>{{controller.car.FullDescription}}</h4>
+    <h4>{{controller.cars.Price}}</h4>
+</div>
+
+<h2>{{controller.cars.FullDescription}}</h2> -->
+
+<div class="modal-header">
+    <h1>{{controller.car.ShortDescription}}</h1>
+</div>
+
+<div class="modal-body">
+    <div class="col-md-2">
+        <img ng-src="{{controller.car.ImageUrl}}" class="img-responsive img-rounded"
+        alt="Responsive image"
+        ng-click="controller.getCarDetails(cars.id)"/>
+        <h4>{{c.ShortDescription}}</h4>
+    </div>

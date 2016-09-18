@@ -1,0 +1,16 @@
+<h1>This is the cars page!</h1>
+
+<select ng-model='selectedMake' ng-options="c.name for c in controller.carMakes">
+
+</select>
+
+<hr>
+
+<div class="row">
+    <div class="col-md-2" ng-repeat='c in controller.cars|filter:{CarMakeId: selectedMake.id}'>
+        <img ng-src="{{c.ImageUrl}}" class="img-responsive img-rounded"
+        alt="Responsive image"
+        ng-click="controller.getCarDetails(cars.id)"/>
+        <h4>{{c.ShortDescription}}</h4>
+    </div>
+</div>
